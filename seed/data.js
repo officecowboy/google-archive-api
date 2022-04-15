@@ -11,7 +11,7 @@ const insertData = async () => {
 
   await Article.insertMany(allArticles);
 
-  db.close();
+  await db.close();
 };
 
 insertData();
