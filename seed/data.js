@@ -2,7 +2,7 @@ import db from "../db/connection.js";
 import Article from "../models/article.js";
 import Memory from "../models/memory.js";
 import memories from "./memories.json" assert { type: "json" };
-import allArticles from "../testArticle.json" assert { type: "json" };
+import {data} from "../testArticle.json" assert { type: "json" };
 // import allArticles from "../AllInOne.json" assert { type: "json" };
 
 const insertData = async () => {
@@ -10,7 +10,7 @@ const insertData = async () => {
 
   await Memory.insertMany(memories);
 
-  await Article.insertMany(allArticles);
+  await Article.insertMany(data);
 
   await db.close();
 };

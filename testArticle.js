@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "abstract": "Scientists at IBM's Almaden Research Center in California are pushing the frontiers of computation; Isaac Chuang, a physicist, is working on a quantum computer; a conventional computer stores and retrieves information represented as ones and zeros, while a quantum computer simultaneously computes upon a potentially vast number of pieces of information in the space of the same one or zero; photo (M)",
     "web_url":"https://www.nytimes.com/2000/01/01/technology/visions-technology-quantum-computers-cars-smarter-than-you-are-can-molecules.html",
