@@ -6,7 +6,7 @@ let Article = new Schema({
   web_url: String,
   lead_paragraph: String,
   headline: String,
-  pub_date: Date,
+  pub_date: String,
   section_name: String,
   byline: String,
 });
