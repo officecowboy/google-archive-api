@@ -5,12 +5,15 @@ import memories from "./memories.json" assert { type: "json" };
 import allArticles from "../AllInOne.json" assert { type: "json" };
 
 const insertData = async () => {
-  await Memory.deleteMany();
+  await db.dropDatabase();
 
   await Memory.insertMany(memories);
+
+  db.close();
 };
 
 insertData();
+
 // const insertNewData = async () => {
 //   await Article.deleteMany();
 //   await Article.insertMany(allArticles);
