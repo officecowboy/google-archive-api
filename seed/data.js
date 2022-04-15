@@ -9,6 +9,7 @@ const insertData = async () => {
 
   await Memory.insertMany(memories);
 
+  console.log(allArticles)
   await Article.insertMany(allArticles);
 
   await db.close();
