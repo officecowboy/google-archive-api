@@ -12,4 +12,4 @@ let Doodles = new Schema({
   high_res_height: String,
 });
 
-export default mongoose.model("googleDoodles", Doodles);
+export default mongoose.model("doodles", Doodles);

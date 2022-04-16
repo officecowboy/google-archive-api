@@ -1,4 +1,4 @@
-import Doodles from "../models/googleDoodles.js";
+import Doodles from "../models/doodles.js";
 
 export const getDoodles = async (request, response) => {
   try {
