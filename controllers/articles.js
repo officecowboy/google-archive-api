@@ -1,14 +1,32 @@
 import Article from "../models/article.js";
+// import allInOne from "../AllInOne.json";
 
 export const getArticles = async (req, res) => {
   try {
-    const articles = await Article.find();
+    console.log(req.query) // 2000-01-01
+    const articles = await Article.find({ pub_date: req.query.date });
     res.json(articles);
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: error.message });
   }
 };
+
+// let startDate = new Date("2000-01-01");
+// let endDate = new Date("2020-01-01");
+
+// let allInOne = article_data.filter(function (a) {
+//   let hitDates = a.ArticleHits || {};
+//   // extract all date strings
+//   hitDates = Object.keys(hitDates);
+//   // convert strings to Date objcts
+//   hitDates = hitDates.map(function (date) { return new Date(date); });
+//   // filter this dates by startDate and endDate
+//   let hitDateMatches = hitDates.filter(function (date) { return date >= startDate && date <= endDate });
+//   // if there is more than 0 results keep it. if 0 then filter it away
+//   return hitDateMatches.length > 0;
+// });
+// console.log(resultArticleData);
 
 export const getArticle = async (req, res) => {
   try {
@@ -24,16 +42,7 @@ export const getArticle = async (req, res) => {
   }
 };
 
-export const createArticle = async (req, res) => {
-  try {
-    const article = new Article(req.body);
-    await article.save();
-    res.status(201).json(article);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: error.message });
-  }
-};
+
 
 export const updateArticle = async (req, res) => {
   const { id } = req.params;
