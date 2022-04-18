@@ -28,7 +28,7 @@ export const createMemory = async (req, res) => {
   try {
     const memory = new Memory(req.body);
     await memory.save();
-    res.status(201).json(article);
+    res.status(201).json(memory);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });
