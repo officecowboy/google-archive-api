@@ -37,7 +37,7 @@ The route contain all the CRUD functions for the models that will be use in this
 | GET    | /memories/random   | Retrieves one random memory. |
 | GET    | /memories/random-ten | Retrieves an array of ten random memories.  |
 | GET    | /memories/?tag=tag | Retrieves all memories with submitted tag. (i.e. "/memories/?tag=computer")  |
-| GET    | /memories/?author=author | Retrieves all memories by submitted author.  |
+| GET    | /memories/ | Retrieves all memories.  |
 | POST  | /memories/ | Creates a new memory based on the JSON body submitted.   |
 | PUT    | /memories/:id | Updates a single memory based on the JSON submitted.    |
 | DELETE | /memories/:id | Deletes a single memory by ID.    |
