@@ -2,8 +2,7 @@ import Article from "../models/article.js";
 
 export const getArticles = async (req, res) => {
   try {
-    console.log(req.query); //2000-01-01
-    const articles = await Article.find({ pub_date: req.query.date });
+    const articles = await Article.find();
     res.json(articles);
   } catch (error) {
     console.log(error.message);
