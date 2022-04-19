@@ -10,6 +10,17 @@ import weather from "./weather.json" assert { type: "json" };
 
 const insertData = async () => {
   await db.dropDatabase();
+  let scrubbedArticles = allArticles.map((article) => {
+    return {
+      abstract: article["abstract"],
+      web_url: article["web_url"],
+      lead_paragraph: article["lead_paragraph"],
+      headline: article["headline"],
+      pub_date: article["pub_date"].split("T")[0],
+      section_name: article["section_name"],
+      byline: article["byline"],
+    };
+  });
 
   await Memory.insertMany(memories);
   await Doodles.insertMany(googleDoodles);
