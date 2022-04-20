@@ -1,10 +1,9 @@
 # Google Archive API
 
 # Models
-Articles - Will show the top 10 articles for a spefici day.
+Articles - Will show the articles for a specific day.
 doodles - will show the google doodles for a specific day with an image. (example: Thanksgiving day will show a turkey image)
-memories - allow user to pick a day and add a memory
-weather - List the current temperature in New york City
+memories - allow user to add a memory
 
 # seed 
  The seed file will allow us to included all the information for each of the model in use and the data.js will allow us to add the information to the databse.
@@ -58,23 +57,10 @@ The route contain all the CRUD functions for the models that will be use in this
 
 *Note: only GET commands will work in browser*
 
-## API weather Endpoints
-
-| Method | Endpoint         | Description             |
-| ------ | ---------------- | ----------------------- |
-| GET    | /weather/             | Retrieves all weather in the database   |
-| GET    | /weather/:id          | Retrieves a single weather by object ID.  |
-| GET    | /weather/random   | Retrieves one random weather. |
-| GET    | /weather/random-ten | Retrieves an array of ten random weather.  |
-| GET    | /weather/?tag=tag | Retrieves all weather with submitted tag.   |
-| GET    | /weather/ | Retrieves all weather.  |
-| POST  | /weather/ | Creates a new weather based on the JSON body submitted.   |
-| PUT    | /weather/:id | Updates a single weather based on the JSON submitted.    |
-| DELETE | /weather/:id | Deletes a single weather by ID.    |
-
-*Note: only GET commands will work in browser*
-
 # Technology
 Javascript
 mongoose
 express
+mongoDB
+CSS
+React
