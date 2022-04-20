@@ -2,7 +2,9 @@
 
 # Models
 Articles - Will show the articles for a specific day.
+
 doodles - will show the google doodles for a specific day with an image. (example: Thanksgiving day will show a turkey image)
+
 memories - allow user to add a memory
 
 # seed 
