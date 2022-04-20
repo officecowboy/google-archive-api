@@ -14,6 +14,7 @@ const insertData = async () => {
   await Memory.insertMany(memories);
   await Doodles.insertMany(googleDoodles);
   await Weather.insertMany(weather);
+  // allArticles is a big file and will crash often if too many pulls
   await Article.insertMany(allArticles);
 
   await db.close();
